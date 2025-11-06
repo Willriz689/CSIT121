@@ -50,11 +50,12 @@ p {
 }
 
 a {
-    color: red;
+    color: #ae0000;
 }
 
 footer {
     text-align: center;
     color: white;
     padding-bottom: 1em;
+
 }
