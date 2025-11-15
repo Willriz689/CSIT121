@@ -1,0 +1,58 @@
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: #03adfc;
+}
+
+main {
+    margin: auto 15%;
+    background-color: white;
+}
+
+article {
+  margin: 2em;
+  padding-bottom: 4em;
+}
+
+h1 {
+    text-align: center;
+    color: white;
+}
+
+h2 {
+    margin-bottom: 35px;
+
+}
+
+.nav {
+  background-color: #12193d;
+  overflow: hidden;
+}
+
+.nav a {
+  float: left;
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  padding: 14px 16px;
+  color: white;
+}
+
+.nav a:not(:first-child) {
+  display: none;
+}
+
+.nav.responsive a:not(:first-child) {
+  display: block;
+}
+
+footer {
+    text-align: center;
+}
+
+.spacer {
+    margin-top: 100px;
+}
+
+.photocreds {
+  font-size: xx-small;
+}

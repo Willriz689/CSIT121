@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles.css">
+    <title>Lab 08: Interactive Menu</title>
+</head>
+<body>
+    <header>
+        <h1>Lab 08: Interactive Menu</h1>
+
+    </header>
+    <main>
+        <script>
+            function myFunction() {
+                var x = document.getElementById("nav");
+                if (x.className === "nav") {
+                    x.className += " responsive";
+                } else {
+                    x.className = "nav";
+                }
+            }
+        </script>
+        <div id="nav" class="nav">
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+            <a href="index.html">Home</a>
+            <a href="jpg.html">JPG Files</a>
+            <a href="gif.html">GIF Files</a>
+            <a href="svg.html">SVG Files</a>
+        </div>
+        <article>
+            <h2>What is it?</h2>
+            <p>The purpose of this lab is to use Javascript to create a custom navigation bar for the lab04 website.</p>
+            <h2 class="spacer">What I learned</h2>
+            <p>
+                I learned all about using Javascript for site functions, as well as how to create navigation bars using a div. I had trouble attempting
+                to create the navigation bar, and keep it even when the links were hidden. This project was very insightful and challenged me to better
+                my own previous programming, with new learned skills. In this project, I used the W3Schools responsive top navigation. I wanted
+                to put my own spin on it, and make it collapsable all the time, instead of just in the mobile configuration. This took some playing around with, but I eventually got it.
+            </p>
+            <h3 class="spacer">Useful Links and Sources</h3>
+            <ul>
+                <li><a href="https://www.w3schools.com/howto/howto_js_topnav_responsive.asp">W3Schools: Responsive Top Navigation</a></li>
+            </ul>
+        </article>
+    </main>
+    <footer>
+        <p>© 2025 William Rizzi</p>
+    </footer>
+</body>
+</html>

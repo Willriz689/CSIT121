@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles.css">
+    <title>Visual Media Lab</title>
+</head>
+<body>
+    <header>
+        <h1>Visual Media Lab</h1>
+
+    </header>
+    <main>
+        <script>
+            function myFunction() {
+                var x = document.getElementById("nav");
+                if (x.className === "nav") {
+                    x.className += " responsive";
+                } else {
+                    x.className = "nav";
+                }
+            }
+        </script>
+        <div id="nav" class="nav">
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+            <a href="index.html">Home</a>
+            <a href="jpg.html">JPG Files</a>
+            <a href="gif.html">GIF Files</a>
+            <a href="svg.html">SVG Files</a>
+        </div>
+        <article>
+            <h2>SVG Files</h2>
+            <img src="images/nginx_logo_dark.svg" alt="NGINX Logo">
+            <p class="photocreds">image source: <a href="https://nginx.org/">NGINX.org</a></p>
+            <h3>Description</h3>
+            <p>This photo is from the NGINX site. NGINX is an open source web server software, that allows you to host your own websites online yourself, instead of with a hosting service. 
+            </p>
+            <h3>File Type Info</h3>
+            <p>SVG is short for Scalable Vector Graphic file. This is a standard graphics file used to render 2D images online. These are used for graphics at any scale and are optimized for 
+                search engines. They do not contain pixels. This is best for user interface elements, icons, and diagrams.
+            </p>
+            <h3>Why did I choose this image?</h3>
+            <p>
+                I picked this particular image as I love open source software as a concept, and have been interested in using NGINX for web services for a while. Since this is a web standards 
+                class, I believed it fitting for the class type.
+            </p>
+        </article>
+    </main>
+    <footer>
+        <p>© 2025 William Rizzi</p>
+    </footer>
+</body>
+</html>

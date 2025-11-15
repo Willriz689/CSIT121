@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles.css">
+    <title>Visual Media Lab</title>
+</head>
+<body>
+    <header>
+        <h1>Visual Media Lab</h1>
+
+    </header>
+    <main>
+        <script>
+            function myFunction() {
+                var x = document.getElementById("nav");
+                if (x.className === "nav") {
+                    x.className += " responsive";
+                } else {
+                    x.className = "nav";
+                }
+            }
+        </script>
+        <div id="nav" class="nav">
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+            <a href="index.html">Home</a>
+            <a href="jpg.html">JPG Files</a>
+            <a href="gif.html">GIF Files</a>
+            <a href="svg.html">SVG Files</a>
+        </div>
+        <article>
+            <h2>JPG Files</h2>
+            <img src="images/capelookout.jpg" alt="Cape Lookout Lighthouse">
+            <p class="photocreds">image source: <a href="https://www.outerbankslighthousesociety.org/capelookout-1.html">Outer Banks Lighthouse Society</a></p>
+            <h3>Description</h3>
+            <p>Cape Lookout is a lighthouse on the southern outer banks in North Carolina. The lighthouse that we see standing today was built in 1859, but it was the second lighthouse to be 
+                at this spot. The first lighthouse at this spot, also named Cape Lookout, was completed and lit in 1812. The first lighthouse was too short to light Lookout Shoals, part of the
+                more dangerous areas of the Graveyard of the Atlantic.
+            </p>
+            <h3>File Type Info</h3>
+            <p>JPG stands for Joint Photographic Experts Group; it is one of the most common formats for photographs. JPG photos can use up to 16.7 million colors, and the file can be
+               compressed, as it uses lossy compression. This file type cannot be animated, and cannot be transparent.
+            </p>
+            <h3>Why did I choose this image?</h3>
+            <p>
+                I picked this photo as it is very nostalgic for me. I grew up in North Carolina, with my grandparents living in Carteret County, miles from the lighthouse. I grew up going to 
+                this lighthouse at least once a year, as well as exploring the island it is on. Lighthouses have always sparked my interest, with the history of each being so unique and each 
+                being shaped and created in its own way.
+            </p>
+            
+        </article>
+    </main>
+    <footer>
+        <p>© 2025 William Rizzi</p>
+    </footer>
+</body>
+</html>
