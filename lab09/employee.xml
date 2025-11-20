@@ -85,7 +85,7 @@
         <lastname>Beesly</lastname>
         <title>Office Administrator</title>
         <division>Operations</division>
-        <building>327</building>
+        <building>252</building>
         <room>32</room>
     </employee>
     <employee id="be140">
@@ -93,7 +93,7 @@
         <lastname>Halpert</lastname>
         <title>Sales Representative</title>
         <division>Sales</division>
-        <building>327</building>
+        <building>252</building>
         <room>32</room>
     </employee>
     <employee id="be141">
@@ -101,7 +101,7 @@
         <lastname>Skywalker</lastname>
         <title>Sales Representative</title>
         <division>Sales</division>
-        <building>327</building>
+        <building>252</building>
         <room>32</room>
     </employee>
     <employee id="be142">
@@ -109,7 +109,7 @@
         <lastname>Hill</lastname>
         <title>Sales Manager</title>
         <division>Sales</division>
-        <building>327</building>
+        <building>252</building>
         <room>32</room>
     </employee>
     <employee id="be143">
@@ -120,4 +120,5 @@
         <building>330</building>
         <room>19</room>
     </employee>
+
 </employees>
