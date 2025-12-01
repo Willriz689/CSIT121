@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 10: Web Standards</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="Whatisit.html">What is it?</a>
+        <a href="howused.html">How is it Used?</a>
+        <a href="whyimportant.html">Why Important?</a>
+        <a href="sources.html">References</a>
+    </nav>
+
+    <main>
+        <h1>How is it used?</h1>
+        <p>This page shows how programmers use the UI Events Code standard to make websites and games interactive.</p>
+
+        <h2>Individual Key Presses</h2>
+        <p>
+            The first example shows the inside function on how a developer can program a physical key to have a certain 
+            function regardless of keyboard layout. The buttons below have German characters, relating to the key presses 
+            involved in those characters on a German keyboard. While they may look different than what is on a qwerty 
+            keyboard, we may make them have the same function as if it were on a English qwerty keyboard by using the code 
+            involved in that key. Press the buttons below to show the example of how the code differs from the key itself.
+        </p>
+        <div class="example">
+            <p>Click the buttons below to type german characters, note the key code correlated:</p>
+            <div class=germanKeys id="germanKeys">
+                <button id="german1">ü</button>
+                <button id="german2">ö</button>
+                <button id="german3">ä</button>
+                <button id="german4">ß</button>
+            </div>
+            <div class="display" id="keyDisplay">
+                Press a key here...
+            </div>
+        </div>
+
+        <h2>Use Case: Keyboard Shortcuts</h2>
+        <p>The second example shows a practical use on how this standard can be used. Developers use this standard to 
+            standardize the keys used on the keyboard to create shortcuts on their site. This can be for things such as 
+            saving a document on OneDrive web version, or saving a game on a online gaming site. Use the shortcuts given on 
+            the second example to see how this can work.
+        </p>
+        <div class="example">
+            <p>Try these keyboard shortcuts:</p>
+            <ul>
+                <li>Press Ctrl+S - Save</li>
+                <li>Press Escape - Cancel</li>
+            </ul>
+            <button id="saveBtn">Click or press Ctrl+S</button>
+            <div class="display" id="shortcutStatus">
+                Waiting for keyboard input...
+            </div>
+        </div>
+
+        <h2>Use Case: Accessibility</h2>
+        <p>There are many web users who are not able to use a mouse, whether it be disability, the computer they are using, 
+            or else. To make a website more accessible to these people, developers can program keys to do certain things on 
+            their site that you normally would do with a mouse. In this example, you can see how you can use the keyboard 
+            only to submit a form that would otherwise need a mouse to navigate, and the key being used is standardized 
+            across all keyboards and browsers. Use the “Enter” Key on your keyboard to traverse this.
+        </p>
+        <div class="example">
+            <p>Try pressing Enter to move between fields, and to submit:</p>
+            <form>
+                <label>Name:</label>
+                <input type="text" id="nameInput" placeholder="Your name">
+                
+                <label>Email:</label>
+                <input type="text" id="emailInput" placeholder="Your email">
+                
+                <button type="button" id="submitBtn">Submit</button>
+            </form>
+            <div class="display" id="formStatus">
+                Form ready...
+            </div>
+        </div>
+
+        <h2>Use Case: Games and Interactive Movement</h2>
+        <p>Many websites have games that need keyboard controls. This standard makes it easy for developers to detect when a player presses keys to move a character around the screen or control the game. Without this standard, different browsers and keyboards would report key presses differently.</p>
+        <div class="example">
+            <p>Click in the game area and use arrow keys to move the square left or right:</p>
+            <div class="game-area" id="gameArea">
+                <div class="player" id="player"></div>
+            </div>
+            <p>Press R to reset position</p>
+        </div>
+        <h2>Conclusion</h2>
+        <p>
+            There are many ways that this web standard is important. Almost every major website uses keypresses to control a 
+            piece of their site. With this web standard, it creates a way to make how these inputs are taken universal. This
+            allows more accessibility, and user friendliness to every site no matter the user's language, location, or needs.
+        </p>
+    </main>
+
+    <footer>
+        <p>© 2025 William Rizzi</p>
+    </footer>
+
+    <script>
+        // key codes
+        const german1 = document.getElementById('german1');
+        const german2 = document.getElementById('german2');
+        const german3 = document.getElementById('german3');
+        const german4 = document.getElementById('german4');
+        german1.addEventListener("click", function(event) {keyDisplay.textContent = 'Code: ' + "BracketLeft" + ' | Key: ' + "ü" });
+        german2.addEventListener("click", function(event) {keyDisplay.textContent = 'Code: ' + 'Semicolon' + ' | Key: ' + "ö";});
+        german3.addEventListener("click", function(event) {keyDisplay.textContent = 'Code: ' + 'Quote' + ' | Key: ' + "ä";});
+        german4.addEventListener("click", function(event) {keyDisplay.textContent = 'Code: ' + 'Minus' + ' | Key: ' + "ß"});
+
+        const keyDisplay = document.getElementById('keyDisplay');
+        keyDisplay.addEventListener('keydown', function(event) {
+            keyDisplay.textContent = 'Code: ' + event.code + ' | Key: ' + event.key;
+        });
+
+        // Game
+        let playerX = 0;
+        const player = document.getElementById('player');
+        const gameArea = document.getElementById('gameArea');
+
+        function updatePlayer() {
+            player.style.left = playerX + 'px';
+        }
+
+        document.addEventListener('keydown', function(event) {
+            if (event.code === 'ArrowLeft' && playerX > 0) {
+                playerX -= 10;
+            }
+            if (event.code === 'ArrowRight' && playerX < gameArea.offsetWidth - 50) {
+                playerX += 10;
+            }
+            if (event.code === 'KeyR') {
+                playerX = 0;
+            }
+            updatePlayer();
+        });
+
+        updatePlayer();
+
+        // shortcuts
+        const saveBtn = document.getElementById('saveBtn');
+        const shortcutStatus = document.getElementById('shortcutStatus');
+
+        saveBtn.addEventListener('click', function() {
+            shortcutStatus.textContent = 'Saved! (button was clicked)';
+        });
+
+        document.addEventListener('keydown', function(event) {
+            if (event.ctrlKey && event.code === 'KeyS') {
+                event.preventDefault();
+                shortcutStatus.textContent = 'Saved! (Ctrl+S was pressed)';
+            }
+            if (event.code === 'Escape') {
+                shortcutStatus.textContent = 'Cancelled! (Escape was pressed)';
+            }
+        });
+
+        // Form
+        const nameInput = document.getElementById('nameInput');
+        const emailInput = document.getElementById('emailInput');
+        const submitBtn = document.getElementById('submitBtn');
+        const formStatus = document.getElementById('formStatus');
+
+        submitBtn.addEventListener('click', function() {
+            const name = nameInput.value || 'No name';
+            const email = emailInput.value || 'No email';
+            formStatus.textContent = 'Submitted! Name: ' + name + ', Email: ' + email;
+        });
+
+        nameInput.addEventListener('keydown', function(event) {
+            if (event.code === 'Enter') {
+                emailInput.focus();
+            }
+        });
+
+        emailInput.addEventListener('keydown', function(event) {
+            if (event.code === 'Enter') {
+                submitBtn.click();
+            }
+        });
+    </script>
+</body>
+</html>
