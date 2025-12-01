@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lab 10: Web Standards</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="Whatisit.html">What is it?</a>
+        <a href="howused.html">How is it Used?</a>
+        <a href="whyimportant.html">Why Important?</a>
+        <a href="sources.html">References</a>
+    </nav>
+
+    <main>
+        <h1>What is the UI Events KeyboardEvents Standard?</h1>
+        <p>
+            The UI Events KeyboardEvents web standard makes a standard code for each key, using a QWERTY format. 
+            It partitions the key codes into the different sections of the keyboard and creates a standard code or 
+            key name for each individual key. This enables developers to use these key codes in their programs to 
+            create a more universal functionality inside their programs, that is universal across all browsers as well.
+        </p>
+        <p>
+            This standard uses the physical location of the key, instead of the key itself. If you use a German keyboard, and press the “ü” key, it will still list in the standard as a “[“ key. This is the 
+            physical location of the key on the keyboard in the QWERTY layout, even if the end user is using a QWERTZ keyboard. The key press itself will show up as the key pressed, in this case a “ü”, but the 
+            code will be a “[“ on the backend. 
+        </p>
+        <p>
+            This development is beneficial to programmers and end users alike, as it creates universal functionality on sites, without sacrificing mistypes within the site when typing. A developer can make it so 
+            that a certain key input on the keyboard, no matter the layout, has the same functionality within the site. The developer no longer has to create considerations for keyboard layouts when programming, 
+            or detect the keyboard layout being used.
+        </p>
+
+        <h2>Common Key Codes</h2>
+        <table>
+            <tr>
+                <th>Code</th>
+                <th>Key</th>
+            </tr>
+            <tr>
+                <td>KeyA, KeyB, KeyC...</td>
+                <td>Letter keys</td>
+            </tr>
+            <tr>
+                <td>Digit0, Digit1, Digit2...</td>
+                <td>Top row number keys</td>
+            </tr>
+            <tr>
+                <td>Numpad0, Numpad1, Numpad2, NumpadBackspace, NumpadClear...</td>
+                <td>The numpad number keys</td>
+            </tr>
+            <tr>
+                <td>Enter</td>
+                <td>Return/Enter key</td>
+            </tr>
+            <tr>
+                <td>Space</td>
+                <td>Spacebar</td>
+            </tr>
+            <tr>
+                <td>Tab</td>
+                <td>Tab key</td>
+            </tr>
+            <tr>
+                <td>ArrowUp, ArrowDown, ArrowLeft, ArrowRight</td>
+                <td>Arrow keys</td>
+            </tr>
+            <tr>
+                <td>Shift, Control, Alt</td>
+                <td>Modifier keys</td>
+            </tr>
+        </table>
+    </main>
+
+    <footer>
+        <p>© 2025 William Rizzi</p>
+    </footer>
+</body>
+</html>
