@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../../style.css" id="mainStylesheet">
+    <link rel="stylesheet" href="styles.css" id="localStylesheet" disabled>
+    <title>Lab 08: Interactive Menu</title>
+</head>
+<body>
+    <div class="hamburger" onclick="toggleNav()">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+
+    <nav id="sidenav" class="sidenav">
+        <div class="closebutton" onclick="toggleNav()">X</div>
+        <a href="../../welcome.html">Welcome</a>
+        <a href="../../index.html">Introduction</a>
+        <a href="../../labsindex.html">Labs Index</a>
+        <a href="../lab01/aboutme.html" class="submenu">Lab 1</a>
+        <a href="../lab02/index.html" class="submenu">Lab 2</a>
+        <a href="../lab03/index.html" class="submenu">Lab 3</a>
+        <a href="../lab04/index.html" class="submenu">Lab 4</a>
+        <a href="../lab05/index.html" class="submenu">Lab 5</a>
+        <a href="../lab06/index.html" class="submenu">Lab 6</a>
+        <a href="../lab07/tierlist.html" class="submenu">Lab 7</a>
+        <a href="../lab08/index.html" class="submenu">Lab 8</a>
+        <a href="../lab09/index.html" class="submenu">Lab 9</a>
+        <a href="../lab10/index.html" class="submenu">Lab 10</a>
+        <a href="../../reflections.html">Reflections</a>
+        <a href="../../sources.html">Sources</a>
+    </nav>
+
+    <header>
+        <h1>Lab 08: Interactive Menu</h1>
+
+    </header>
+    <main>
+        <script>
+            function myFunction() {
+                var x = document.getElementById("nav");
+                if (x.className === "nav") {
+                    x.className += " responsive";
+                } else {
+                    x.className = "nav";
+                }
+            }
+        </script>
+        <div id="nav" class="nav">
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+            <a href="index.html">Home</a>
+            <a href="jpg.html">JPG Files</a>
+            <a href="gif.html">GIF Files</a>
+            <a href="svg.html">SVG Files</a>
+        </div>
+        <article>
+            <h2>What is it?</h2>
+            <p>The purpose of this lab is to use Javascript to create a custom navigation bar for the lab04 website.</p>
+            <h2 class="spacer">What I learned</h2>
+            <p>
+                I learned all about using Javascript for site functions, as well as how to create navigation bars using a div. I had trouble attempting
+                to create the navigation bar, and keep it even when the links were hidden. This project was very insightful and challenged me to better
+                my own previous programming, with new learned skills. In this project, I used the W3Schools responsive top navigation. I wanted
+                to put my own spin on it, and make it collapsable all the time, instead of just in the mobile configuration. This took some playing around with, but I eventually got it.
+            </p>
+            <h3 class="spacer">Useful Links and Sources</h3>
+            <ul>
+                <li><a href="https://www.w3schools.com/howto/howto_js_topnav_responsive.asp">W3Schools: Responsive Top Navigation</a></li>
+            </ul>
+        </article>
+    </main>
+    <footer>
+        <p>© 2025 William Rizzi</p>
+    </footer>
+    
+    <button id="styleToggle" class="style-toggle-btn">Toggle Style</button>
+    
+    <script>
+        var styleLink = document.getElementById('mainStylesheet');
+        var localStyleLink = document.getElementById('localStylesheet');
+        var toggleBtn = document.getElementById('styleToggle');
+        var usingMainStyle = true;
+        
+        toggleBtn.onclick = function() {
+            if (usingMainStyle) {
+                styleLink.disabled = true;
+                localStyleLink.disabled = false;
+                usingMainStyle = false;
+            } else {
+                styleLink.disabled = false;
+                localStyleLink.disabled = true;
+                usingMainStyle = true;
+            }
+        };
+        localStyleLink.disabled = true;
+
+        function toggleNav() {
+            var nav = document.getElementById('sidenav');
+            nav.classList.toggle('open');
+        }
+    </script>
+</body>
+</html>

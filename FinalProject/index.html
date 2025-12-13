@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <title>Final Project - Introduction</title>
+    </head>
+    <body>
+        <div class="hamburger" onclick="toggleNav()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        
+        <nav id="sidenav" class="sidenav">
+            <div class="closebutton" onclick="toggleNav()">X</div>
+            <a href="welcome.html">Welcome</a>
+            <a href="index.html">Introduction</a>
+            <a href="labsindex.html">Labs Index</a>
+            <a href="labs/lab01/aboutme.html" class="submenu">Lab 1</a>
+            <a href="labs/lab02/index.html" class="submenu">Lab 2</a>
+            <a href="labs/lab03/index.html" class="submenu">Lab 3</a>
+            <a href="labs/lab04/index.html" class="submenu">Lab 4</a>
+            <a href="labs/lab05/index.html" class="submenu">Lab 5</a>
+            <a href="labs/lab06/index.html" class="submenu">Lab 6</a>
+            <a href="labs/lab07/tierlist.html" class="submenu">Lab 7</a>
+            <a href="labs/lab08/index.html" class="submenu">Lab 8</a>
+            <a href="labs/lab09/index.html" class="submenu">Lab 9</a>
+            <a href="labs/lab10/index.html" class="submenu">Lab 10</a>
+            <a href="reflections.html">Reflections</a>
+            <a href="sources.html">Sources</a>
+        </nav>
+        
+        <h1>
+            Introduction
+        </h1>
+        <main id="mainContent">
+
+            <h2>
+                What is this project?
+            </h2>
+            <p>
+                This is the final project for CCBC's CSIT 121 "Web Standards" class. The purpose of this project is to make a website that contains all labs created throughout the semester, and turn it into one web page. As you go through this site, you can click the "Toggle Style" on the bottom right of each page to switch to the original styling of the site. As you progress through the labs, note the difference in styling. With each lab, you will see what the class focused on week by week in learning web standards and development.
+            </p>
+            <div class="nextpage">
+            <a href="labsindex.html">Next Page &#8594;</a>
+            </div>
+        </main>
+        
+        <script>
+            function toggleNav() {
+                var nav = document.getElementById('sidenav');
+                nav.classList.toggle('open');
+            }
+        </script>
+    </body>
+</html>

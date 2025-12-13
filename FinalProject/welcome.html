@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <title>Final Project - Welcome!</title>
+    </head>
+    <body>
+        <div class="hamburger" onclick="toggleNav()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        
+        <nav id="sidenav" class="sidenav">
+            <div class="closebutton" onclick="toggleNav()">X</div>
+            <a href="welcome.html">Welcome</a>
+            <a href="index.html">Introduction</a>
+            <a href="labsindex.html">Labs Index</a>
+            <a href="labs/lab01/aboutme.html" class="submenu">Lab 1</a>
+            <a href="labs/lab02/index.html" class="submenu">Lab 2</a>
+            <a href="labs/lab03/index.html" class="submenu">Lab 3</a>
+            <a href="labs/lab04/index.html" class="submenu">Lab 4</a>
+            <a href="labs/lab05/index.html" class="submenu">Lab 5</a>
+            <a href="labs/lab06/index.html" class="submenu">Lab 6</a>
+            <a href="labs/lab07/tierlist.html" class="submenu">Lab 7</a>
+            <a href="labs/lab08/index.html" class="submenu">Lab 8</a>
+            <a href="labs/lab09/index.html" class="submenu">Lab 9</a>
+            <a href="labs/lab10/index.html" class="submenu">Lab 10</a>
+            <a href="reflections.html">Reflections</a>
+            <a href="sources.html">Sources</a>
+        </nav>
+        
+        <div class="welcome-screen">
+            <p class="welcomeletter">W</p>
+            <p class="welcomeletter">E</p>
+            <p class="welcomeletter">L</p>
+            <p class="welcomeletter">C</p>
+            <p class="welcomeletter">O</p>
+            <p class="welcomeletter">M</p>
+            <p class="welcomeletter">E</p>
+        </div>
+        <div>
+            <p class="welcome-continue">To continue, press the enter key, or click the arrow.</p>
+        </div>
+        <a href="index.html" class="arrowbutton">&#8594;</a>
+        <script>
+            document.addEventListener('keydown', function(event) {
+                if (event.key === 'Enter') {
+                    window.location.href = "index.html";
+                }
+            });
+            
+            function toggleNav() {
+                var nav = document.getElementById('sidenav');
+                nav.classList.toggle('open');
+            }
+        </script>
+    </body>
+</html>

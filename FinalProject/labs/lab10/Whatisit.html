@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 10: Web Standards</title>
+    <link rel="stylesheet" href="../../style.css" id="mainStylesheet">
+    <link rel="stylesheet" href="style.css" id="localStylesheet" disabled>
+</head>
+<body>
+    <div class="hamburger" onclick="toggleNav()">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+
+    <nav id="sidenav" class="sidenav">
+        <div class="closebutton" onclick="toggleNav()">X</div>
+        <a href="../../welcome.html">Welcome</a>
+        <a href="../../index.html">Introduction</a>
+        <a href="../../labsindex.html">Labs Index</a>
+        <a href="../lab01/aboutme.html" class="submenu">Lab 1</a>
+        <a href="../lab02/index.html" class="submenu">Lab 2</a>
+        <a href="../lab03/index.html" class="submenu">Lab 3</a>
+        <a href="../lab04/index.html" class="submenu">Lab 4</a>
+        <a href="../lab05/index.html" class="submenu">Lab 5</a>
+        <a href="../lab06/index.html" class="submenu">Lab 6</a>
+        <a href="../lab07/tierlist.html" class="submenu">Lab 7</a>
+        <a href="../lab08/index.html" class="submenu">Lab 8</a>
+        <a href="../lab09/index.html" class="submenu">Lab 9</a>
+        <a href="../lab10/index.html" class="submenu">Lab 10</a>
+        <a href="../../reflections.html">Reflections</a>
+        <a href="../../sources.html">Sources</a>
+    </nav>
+
+    <nav class="lab04-nav">
+        <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="Whatisit.html">What is it?</a></li>
+        <li><a href="howused.html">How is it Used?</a></li>
+        <li><a href="whyimportant.html">Why Important?</a></li>
+        <li><a href="sources.html">References</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <h1>What is the UI Events KeyboardEvents Standard?</h1>
+        <p>
+            The UI Events KeyboardEvents web standard makes a standard code for each key, using a QWERTY format. 
+            It partitions the key codes into the different sections of the keyboard and creates a standard code or 
+            key name for each individual key. This enables developers to use these key codes in their programs to 
+            create a more universal functionality inside their programs, that is universal across all browsers as well.
+        </p>
+        <p>
+            This standard uses the physical location of the key, instead of the key itself. If you use a German keyboard, and press the “ü” key, it will still list in the standard as a “[“ key. This is the 
+            physical location of the key on the keyboard in the QWERTY layout, even if the end user is using a QWERTZ keyboard. The key press itself will show up as the key pressed, in this case a “ü”, but the 
+            code will be a “[“ on the backend. 
+        </p>
+        <p>
+            This development is beneficial to programmers and end users alike, as it creates universal functionality on sites, without sacrificing mistypes within the site when typing. A developer can make it so 
+            that a certain key input on the keyboard, no matter the layout, has the same functionality within the site. The developer no longer has to create considerations for keyboard layouts when programming, 
+            or detect the keyboard layout being used.
+        </p>
+
+        <h2>Common Key Codes</h2>
+        <table>
+            <tr>
+                <th>Code</th>
+                <th>Key</th>
+            </tr>
+            <tr>
+                <td>KeyA, KeyB, KeyC...</td>
+                <td>Letter keys</td>
+            </tr>
+            <tr>
+                <td>Digit0, Digit1, Digit2...</td>
+                <td>Top row number keys</td>
+            </tr>
+            <tr>
+                <td>Numpad0, Numpad1, Numpad2, NumpadBackspace, NumpadClear...</td>
+                <td>The numpad number keys</td>
+            </tr>
+            <tr>
+                <td>Enter</td>
+                <td>Return/Enter key</td>
+            </tr>
+            <tr>
+                <td>Space</td>
+                <td>Spacebar</td>
+            </tr>
+            <tr>
+                <td>Tab</td>
+                <td>Tab key</td>
+            </tr>
+            <tr>
+                <td>ArrowUp, ArrowDown, ArrowLeft, ArrowRight</td>
+                <td>Arrow keys</td>
+            </tr>
+            <tr>
+                <td>Shift, Control, Alt</td>
+                <td>Modifier keys</td>
+            </tr>
+        </table>
+    </main>
+
+    <footer>
+        <p>© 2025 William Rizzi</p>
+    </footer>
+
+<button id="styleToggle" class="style-toggle-btn">Toggle Style</button>
+
+<script>
+    function toggleNav() {
+        var nav = document.getElementById('sidenav');
+        nav.classList.toggle('open');
+    }
+
+    var styleLink = document.getElementById('mainStylesheet');
+    var localStyleLink = document.getElementById('localStylesheet');
+    var toggleBtn = document.getElementById('styleToggle');
+    var usingMainStyle = true;
+    
+    toggleBtn.onclick = function() {
+        if (usingMainStyle) {
+            styleLink.disabled = true;
+            localStyleLink.disabled = false;
+            usingMainStyle = false;
+        } else {
+            styleLink.disabled = false;
+            localStyleLink.disabled = true;
+            usingMainStyle = true;
+        }
+    };
+    localStyleLink.disabled = true;
+</script>
+</body>
+</html>

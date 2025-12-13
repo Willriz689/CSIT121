@@ -1,0 +1,51 @@
+body {
+    background-color: #fcefe6;
+    font-family: "Franklin Gothic", "Franklin Gothic Book", "Arial", sans-serif;
+}
+
+p {
+    color: #2b2b2b;    
+}
+
+a {
+    color: #185214;
+}
+
+ul {
+    background-color: white;
+    border-color:black;
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 25px;
+    padding: 20px;
+    width: 40%;
+}
+
+
+.headings {
+    color:#683b17;
+    font-weight: bold;
+}
+
+.center {
+    text-align: center;
+    width: 80%;
+    margin: auto;
+    margin-bottom: 15px;
+}
+
+.padding {
+    margin-bottom: 30px;
+
+}
+
+.right {
+    text-align: right;
+    margin-right: 30%;
+
+}
+
+#title {
+    color:black;
+    font-style:italic
+}

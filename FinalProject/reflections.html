@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <title>Final Project - Reflections</title>
+    </head>
+    <body>
+        <div class="hamburger" onclick="toggleNav()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        
+        <nav id="sidenav" class="sidenav">
+            <div class="closebutton" onclick="toggleNav()">X</div>
+            <a href="welcome.html">Welcome</a>
+            <a href="index.html">Introduction</a>
+            <a href="labsindex.html">Labs Index</a>
+            <a href="labs/lab01/aboutme.html" class="submenu">Lab 1</a>
+            <a href="labs/lab02/index.html" class="submenu">Lab 2</a>
+            <a href="labs/lab03/index.html" class="submenu">Lab 3</a>
+            <a href="labs/lab04/index.html" class="submenu">Lab 4</a>
+            <a href="labs/lab05/index.html" class="submenu">Lab 5</a>
+            <a href="labs/lab06/index.html" class="submenu">Lab 6</a>
+            <a href="labs/lab07/tierlist.html" class="submenu">Lab 7</a>
+            <a href="labs/lab08/index.html" class="submenu">Lab 8</a>
+            <a href="labs/lab09/index.html" class="submenu">Lab 9</a>
+            <a href="labs/lab10/index.html" class="submenu">Lab 10</a>
+            <a href="reflections.html">Reflections</a>
+            <a href="sources.html">Sources</a>
+        </nav>
+        
+        <h1>Reflections</h1>
+        <main id="mainContent">
+            <h2>Project Reflection</h2>
+            <p>This final project has pushed me outside of my comfort zone and forced me to be even more solid with the basics than I was before this. With this project, I became a lot more comfortable editing previously finished websites, to change them to what they need to be. For this project, that would be taking the labs, and adding functionality to them to change the stylesheets, as well as setting the main stylesheet to be the one in the base folder. Another challenge for me in this project was creating the collapsible sidebar. I struggled with the sizing as well as putting the labs into it. My biggest struggle came from planning the site from scratch to include all of the labs in it, along with the styling and layout. I had a lot of trouble finding how to best lay out the labs in a way that would make sense. My triumphs in this project come directly from my struggles, as I got past these problems and found solutions.</p>
+            
+            <h2>Course Reflection</h2>
+            <p>I learned more than I ever thought I would in this class, and enjoyed this class even more than I thought I would. I had so much fun as this class went on, personalizing websites and creating them to be the image that I had in my mind for them. I was able to do more and more to the website as the course went on, learning more about the extent of the capabilities of this technology. This also brought out a intense sense of curiosity throughout the class, researching things that I would want to put on a website, and finding my way through my problems during creation with this as well. Though I had fun in this class, I struggled more than I thought. As I got behind mid-semester for personal reasons, and found it very hard to catch back up. I am thankful for the professor for the insightful videos, readings, and comments on submissions throughout the semester.</p>
+        </main>
+
+        <script>
+            function toggleNav() {
+                var nav = document.getElementById('sidenav');
+                nav.classList.toggle('open');
+            }
+        </script>
+    </body>
+</html>

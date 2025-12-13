@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 10: Web Standards</title>
+    <link rel="stylesheet" href="../../style.css" id="mainStylesheet">
+    <link rel="stylesheet" href="style.css" id="localStylesheet" disabled>
+</head>
+<body>
+    <div class="hamburger" onclick="toggleNav()">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+
+    <nav id="sidenav" class="sidenav">
+        <div class="closebutton" onclick="toggleNav()">X</div>
+        <a href="../../welcome.html">Welcome</a>
+        <a href="../../index.html">Introduction</a>
+        <a href="../../labsindex.html">Labs Index</a>
+        <a href="../lab01/aboutme.html" class="submenu">Lab 1</a>
+        <a href="../lab02/index.html" class="submenu">Lab 2</a>
+        <a href="../lab03/index.html" class="submenu">Lab 3</a>
+        <a href="../lab04/index.html" class="submenu">Lab 4</a>
+        <a href="../lab05/index.html" class="submenu">Lab 5</a>
+        <a href="../lab06/index.html" class="submenu">Lab 6</a>
+        <a href="../lab07/tierlist.html" class="submenu">Lab 7</a>
+        <a href="../lab08/index.html" class="submenu">Lab 8</a>
+        <a href="../lab09/index.html" class="submenu">Lab 9</a>
+        <a href="../lab10/index.html" class="submenu">Lab 10</a>
+        <a href="../../reflections.html">Reflections</a>
+        <a href="../../sources.html">Sources</a>
+    </nav>
+
+    <nav class="lab04-nav">
+        <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="Whatisit.html">What is it?</a></li>
+        <li><a href="howused.html">How is it Used?</a></li>
+        <li><a href="whyimportant.html">Why Important?</a></li>
+        <li><a href="sources.html">References</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <h1>Why is this standard important?</h1>
+        <p>This web standard is important as it allows users all over the world to access and use the web. Without this web 
+            standard, it would be much more complicated for users with different keyboard layouts, who speak different 
+            languages, or people with disabilities to access websites. This standard has created a way to make sure that all 
+            of these people can access a site and have the same experience as any other person would on the site.
+        </p>
+        <p>
+            The web standard has made it easier for developers to develop a website that uses keyboard inputs as well. Without 
+            this web standard, it would be much harder and more intricate for a developer to develop a site for a user with a 
+            different keyboard layout, or without a mouse. 
+        </p>
+    </main>
+
+    <footer>
+        <p>© 2025 William Rizzi</p>
+    </footer>
+
+<button id="styleToggle" class="style-toggle-btn">Toggle Style</button>
+
+<script>
+    function toggleNav() {
+        var nav = document.getElementById('sidenav');
+        nav.classList.toggle('open');
+    }
+
+    var styleLink = document.getElementById('mainStylesheet');
+    var localStyleLink = document.getElementById('localStylesheet');
+    var toggleBtn = document.getElementById('styleToggle');
+    var usingMainStyle = true;
+    
+    toggleBtn.onclick = function() {
+        if (usingMainStyle) {
+            styleLink.disabled = true;
+            localStyleLink.disabled = false;
+            usingMainStyle = false;
+        } else {
+            styleLink.disabled = false;
+            localStyleLink.disabled = true;
+            usingMainStyle = true;
+        }
+    };
+    localStyleLink.disabled = true;
+</script>
+</body>
+</html>

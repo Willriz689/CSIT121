@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../../style.css" id="mainStylesheet">
+    <link rel="stylesheet" href="styles.css" id="localStylesheet" disabled>
+    <title>Visual Media Lab</title>
+</head>
+<body>
+    <div class="hamburger" onclick="toggleNav()">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+
+    <nav id="sidenav" class="sidenav">
+        <div class="closebutton" onclick="toggleNav()">X</div>
+        <a href="../../welcome.html">Welcome</a>
+        <a href="../../index.html">Introduction</a>
+        <a href="../../labsindex.html">Labs Index</a>
+        <a href="../lab01/aboutme.html" class="submenu">Lab 1</a>
+        <a href="../lab02/index.html" class="submenu">Lab 2</a>
+        <a href="../lab03/index.html" class="submenu">Lab 3</a>
+        <a href="../lab04/index.html" class="submenu">Lab 4</a>
+        <a href="../lab05/index.html" class="submenu">Lab 5</a>
+        <a href="../lab06/index.html" class="submenu">Lab 6</a>
+        <a href="../lab07/tierlist.html" class="submenu">Lab 7</a>
+        <a href="../lab08/index.html" class="submenu">Lab 8</a>
+        <a href="../lab09/index.html" class="submenu">Lab 9</a>
+        <a href="../lab10/index.html" class="submenu">Lab 10</a>
+        <a href="../../reflections.html">Reflections</a>
+        <a href="../../sources.html">Sources</a>
+    </nav>
+
+    <header>
+        <h1>Visual Media Lab</h1>
+
+    </header>
+    <main>
+        <script>
+            function myFunction() {
+                var x = document.getElementById("nav");
+                if (x.className === "nav") {
+                    x.className += " responsive";
+                } else {
+                    x.className = "nav";
+                }
+            }
+        </script>
+        <div id="nav" class="nav">
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+            <a href="index.html">Home</a>
+            <a href="jpg.html">JPG Files</a>
+            <a href="gif.html">GIF Files</a>
+            <a href="svg.html">SVG Files</a>
+        </div>
+        <article>
+            <h2>JPG Files</h2>
+            <img src="images/capelookout.jpg" alt="Cape Lookout Lighthouse">
+            <p class="photocreds">image source: <a href="https://www.outerbankslighthousesociety.org/capelookout-1.html">Outer Banks Lighthouse Society</a></p>
+            <h3>Description</h3>
+            <p>Cape Lookout is a lighthouse on the southern outer banks in North Carolina. The lighthouse that we see standing today was built in 1859, but it was the second lighthouse to be 
+                at this spot. The first lighthouse at this spot, also named Cape Lookout, was completed and lit in 1812. The first lighthouse was too short to light Lookout Shoals, part of the
+                more dangerous areas of the Graveyard of the Atlantic.
+            </p>
+            <h3>File Type Info</h3>
+            <p>JPG stands for Joint Photographic Experts Group; it is one of the most common formats for photographs. JPG photos can use up to 16.7 million colors, and the file can be
+               compressed, as it uses lossy compression. This file type cannot be animated, and cannot be transparent.
+            </p>
+            <h3>Why did I choose this image?</h3>
+            <p>
+                I picked this photo as it is very nostalgic for me. I grew up in North Carolina, with my grandparents living in Carteret County, miles from the lighthouse. I grew up going to 
+                this lighthouse at least once a year, as well as exploring the island it is on. Lighthouses have always sparked my interest, with the history of each being so unique and each 
+                being shaped and created in its own way.
+            </p>
+            
+        </article>
+    </main>
+    <footer>
+        <p>© 2025 William Rizzi</p>
+    </footer>
+
+<button id="styleToggle" class="style-toggle-btn">Toggle Style</button>
+
+<script>
+    var styleLink = document.getElementById('mainStylesheet');
+    var localStyleLink = document.getElementById('localStylesheet');
+    var toggleBtn = document.getElementById('styleToggle');
+    var usingMainStyle = true;
+    
+    toggleBtn.onclick = function() {
+        if (usingMainStyle) {
+            styleLink.disabled = true;
+            localStyleLink.disabled = false;
+            usingMainStyle = false;
+        } else {
+            styleLink.disabled = false;
+            localStyleLink.disabled = true;
+            usingMainStyle = true;
+        }
+    };
+    localStyleLink.disabled = true;
+
+    function toggleNav() {
+        var nav = document.getElementById('sidenav');
+        nav.classList.toggle('open');
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="../../style.css" id="mainStylesheet">
+    <title>Reads the XML data using JavaScript</title>
+
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th,
+        td {
+            text-align: left;
+            padding: 8px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #7ce2af
+        }
+
+        th {
+            background-color: #7c0f65;
+            color: white;
+        }
+
+        .button {
+            position: relative;
+            text-align: center;
+            padding: 20px;
+            border: 4px solid rgb(55, 12, 211);
+            background: rgba(20, 192, 4, 0.5);
+            color: rgb(230, 36, 78);
+            outline: none;
+            border-radius: 30px;
+            font-size: 30px;
+            width: 500px;
+
+        }
+
+        .button:hover {
+            color: black;
+            background: white;
+        }
+    </style>
+
+    <script>
+        function loadXMLDoc() {
+            let xmlhttp = new XMLHttpRequest();
+            xmlhttp.onreadystatechange = function () {
+
+                // Request finished and response 
+                // is ready and Status is "OK"
+                if (this.readyState == 4 && this.status == 200) {
+                    empDetails(this);
+                }
+            };
+
+            // employee.xml is the external xml file
+            xmlhttp.open("GET", "employee.xml", true);
+            xmlhttp.send();
+        }
+
+        function empDetails(xml) {
+            let i;
+            let xmlDoc = xml.responseXML;
+            let table =
+                `<tr><th>Firstname</th><th>Lastname</th>
+                    <th>Title</th><th>Division</th>
+                    <th>Building</th><th>Room</th>
+                </tr>`;
+            let x = xmlDoc.getElementsByTagName("employee");
+
+            // Start to fetch the data by using TagName 
+            for (i = 0; i < x.length; i++) {
+                table += "<tr><td>" +
+                    x[i].getElementsByTagName("firstname")[0]
+                        .childNodes[0].nodeValue + "</td><td>" +
+                    x[i].getElementsByTagName("lastname")[0]
+                        .childNodes[0].nodeValue + "</td><td>" +
+                    x[i].getElementsByTagName("title")[0]
+                        .childNodes[0].nodeValue + "</td><td>" +
+                    x[i].getElementsByTagName("division")[0]
+                        .childNodes[0].nodeValue + "</td><td>" +
+                    x[i].getElementsByTagName("building")[0]
+                        .childNodes[0].nodeValue + "</td><td>" +
+                    x[i].getElementsByTagName("room")[0]
+                        .childNodes[0].nodeValue + "</td></tr>";
+            }
+
+            // Print the xml data in table form
+            document.getElementById("id").innerHTML = table;
+        }
+    </script>
+</head>
+
+<body>
+    <div class="hamburger" onclick="toggleNav()">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+
+    <nav id="sidenav" class="sidenav">
+        <div class="closebutton" onclick="toggleNav()">X</div>
+        <a href="../../welcome.html">Welcome</a>
+        <a href="../../index.html">Introduction</a>
+        <a href="../../labsindex.html">Labs Index</a>
+        <a href="../lab01/aboutme.html" class="submenu">Lab 1</a>
+        <a href="../lab02/index.html" class="submenu">Lab 2</a>
+        <a href="../lab03/index.html" class="submenu">Lab 3</a>
+        <a href="../lab04/index.html" class="submenu">Lab 4</a>
+        <a href="../lab05/index.html" class="submenu">Lab 5</a>
+        <a href="../lab06/index.html" class="submenu">Lab 6</a>
+        <a href="../lab07/tierlist.html" class="submenu">Lab 7</a>
+        <a href="../lab08/index.html" class="submenu">Lab 8</a>
+        <a href="../lab09/index.html" class="submenu">Lab 9</a>
+        <a href="../lab10/index.html" class="submenu">Lab 10</a>
+        <a href="../../reflections.html">Reflections</a>
+        <a href="../../sources.html">Sources</a>
+    </nav>
+
+    <center>
+        <button type="button" class="button" onclick="loadXMLDoc()">
+            Get Employees Details
+        </button>
+    </center>
+
+    <br><br>
+    <table id="id"></table>
+    
+    <button id="styleToggle" class="style-toggle-btn">Toggle Style</button>
+    
+    <script>
+        var styleLink = document.getElementById('mainStylesheet');
+        var toggleBtn = document.getElementById('styleToggle');
+        var styleEnabled = true;
+        
+        toggleBtn.onclick = function() {
+            if (styleEnabled) {
+                styleLink.disabled = true;
+                styleEnabled = false;
+            } else {
+                styleLink.disabled = false;
+                styleEnabled = true;
+            }
+        };
+
+        function toggleNav() {
+            var nav = document.getElementById('sidenav');
+            nav.classList.toggle('open');
+        }
+    </script>
+</body>
+
+</html>

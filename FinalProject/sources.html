@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <title>Final Project - Sources</title>
+    </head>
+    <body>
+        <div class="hamburger" onclick="toggleNav()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        
+        <nav id="sidenav" class="sidenav">
+            <div class="closebutton" onclick="toggleNav()">X</div>
+            <a href="welcome.html">Welcome</a>
+            <a href="index.html">Introduction</a>
+            <a href="labsindex.html">Labs Index</a>
+            <a href="labs/lab01/aboutme.html" class="submenu">Lab 1</a>
+            <a href="labs/lab02/index.html" class="submenu">Lab 2</a>
+            <a href="labs/lab03/index.html" class="submenu">Lab 3</a>
+            <a href="labs/lab04/index.html" class="submenu">Lab 4</a>
+            <a href="labs/lab05/index.html" class="submenu">Lab 5</a>
+            <a href="labs/lab06/index.html" class="submenu">Lab 6</a>
+            <a href="labs/lab07/tierlist.html" class="submenu">Lab 7</a>
+            <a href="labs/lab08/index.html" class="submenu">Lab 8</a>
+            <a href="labs/lab09/index.html" class="submenu">Lab 9</a>
+            <a href="labs/lab10/index.html" class="submenu">Lab 10</a>
+            <a href="reflections.html">Reflections</a>
+            <a href="sources.html">Sources</a>
+        </nav>
+        
+        <h1>Sources</h1>
+        <main id="mainContent">
+            <p><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Animations/Using" target="_blank">https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Animations/Using</a> - used to create the animations used in the welcome screen in the site.</p>
+
+            <p><a href="https://www.w3schools.com/Js/" target="_blank">https://www.w3schools.com/Js/</a> - used as a guide on writing the JavaScript functionality for the website, including the pressing enter key at the welcome screen, and flipping the stylesheets within the sites.</p>
+
+            <p><a href="https://www.w3schools.com/howto/howto_css_sidenav_buttons.asp" target="_blank">https://www.w3schools.com/howto/howto_css_sidenav_buttons.asp</a> - got ideas from the code on the side-navbar</p>
+
+            <p>Claude Sonnet 4.5 - fixing some of the logic and styling for the site.</p>
+        </main>
+
+        <script>
+            function toggleNav() {
+                var nav = document.getElementById('sidenav');
+                nav.classList.toggle('open');
+            }
+        </script>
+    </body>
+</html>

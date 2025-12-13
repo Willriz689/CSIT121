@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset ="UTF-8">
+        <link rel="stylesheet" href="../../style.css" id="mainStylesheet">
+        <link rel="stylesheet" href="style.css" id="localStylesheet" disabled>
+        <title>MLB Fan Base Tier List</title>
+    </head>
+    <body>
+        <div class="hamburger" onclick="toggleNav()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+
+        <nav id="sidenav" class="sidenav">
+            <div class="closebutton" onclick="toggleNav()">X</div>
+            <a href="../../welcome.html">Welcome</a>
+            <a href="../../index.html">Introduction</a>
+            <a href="../../labsindex.html">Labs Index</a>
+            <a href="../lab01/aboutme.html" class="submenu">Lab 1</a>
+            <a href="../lab02/index.html" class="submenu">Lab 2</a>
+            <a href="../lab03/index.html" class="submenu">Lab 3</a>
+            <a href="../lab04/index.html" class="submenu">Lab 4</a>
+            <a href="../lab05/index.html" class="submenu">Lab 5</a>
+            <a href="../lab06/index.html" class="submenu">Lab 6</a>
+            <a href="../lab07/tierlist.html" class="submenu">Lab 7</a>
+            <a href="../lab08/index.html" class="submenu">Lab 8</a>
+            <a href="../lab09/index.html" class="submenu">Lab 9</a>
+            <a href="../lab10/index.html" class="submenu">Lab 10</a>
+            <a href="../../reflections.html">Reflections</a>
+            <a href="../../sources.html">Sources</a>
+        </nav>
+
+        <header>
+            <h1>Lab 07: Table and Form Lab</h1>
+        </header>
+        <main>
+            <nav class="lab07-nav">
+                <ul>
+                    <li><a href="contact.html">Contact Form</a></li>
+                    <li><a href="tierlist.html">Tier List</a></li>
+                </ul>
+            </nav>
+            <article>
+                <h2>Contact Form</h2>
+                <form>
+                    <label for="fname">First Name:</label><br>
+                    <input class="form-small" type="text" id="fname" name="fname"><br>
+
+                    <label for="lname">Last Name:</label><br>
+                    <input class="form-small" type="text" id="lname" name="lname"><br>
+
+                    <label for="email">Email Address:</label><br>
+                    <input class="form-small" type="text" id="email" name="email"><br>
+
+                    <label for="comments">Comments:</label><br>
+                    <input type="text" id="comments" name="comments"><br>
+
+                    <label for="favoriteteam">What is your favorite team?</label><br>
+                    <input type="text" id="favoriteteam" name="favoriteteam"><br>
+
+                    <div class="form-radio">
+                        <label for="teamrankingquestion">What was your favorite team ranked?</label><br>
+                        <input type="radio" id="S" name="teamrankingquestion" value="S">
+                        <label for="S">S</label><br>
+                        <input type="radio" id="A" name="teamrankingquestion" value="A">
+                        <label for="A">A</label><br>
+                        <input type="radio" id="B" name="teamrankingquestion" value="B">
+                        <label for="B">B</label><br>
+                        <input type="radio" id="C" name="teamrankingquestion" value="C">
+                        <label for="C">C</label><br>
+                        <input type="radio" id="D" name="teamrankingquestion" value="D">
+                        <label for="D">D</label><br>
+                        <input type="radio" id="F" name="teamrankingquestion" value="F">
+                        <label for="F">F</label><br>
+                        <input type="radio" id="DoesNotExist" name="teamrankingquestion" value="Does Not Exist">
+                        <label for="DoesNotExist">Does Not Exist</label><br><br>
+                        
+                        <label for="teamaccuracyquestion">Do you think these rankings are accurate?</label><br>
+                        <input type="radio" id="Yes" name="teamaccuracyquestion" value="Yes">
+                        <label for="Yes">Yes</label><br>
+                        <input type="radio" id="No" name="teamaccuracyquestion" value="No">
+                        <label for="No">No</label><br><br>
+
+                        <label for="button">Hit the button if you are angry at the rankings.</label><br>
+                        <input type="button" id="button" value="Angry people here."><br>
+                    </div>
+                    <div class="spacer"></div>
+                    <input type="submit" value="Submit">
+                </form>
+            </article>
+        </main>
+    </body>
+    <footer>
+        <p>© 2025 William Rizzi</p>
+    </footer>
+    
+    <button id="styleToggle" class="style-toggle-btn">Toggle Style</button>
+    
+    <script>
+        var styleLink = document.getElementById('mainStylesheet');
+        var localStyleLink = document.getElementById('localStylesheet');
+        var toggleBtn = document.getElementById('styleToggle');
+        var usingMainStyle = true;
+        
+        toggleBtn.onclick = function() {
+            if (usingMainStyle) {
+                styleLink.disabled = true;
+                localStyleLink.disabled = false;
+                usingMainStyle = false;
+            } else {
+                styleLink.disabled = false;
+                localStyleLink.disabled = true;
+                usingMainStyle = true;
+            }
+        };
+        localStyleLink.disabled = true;
+
+        function toggleNav() {
+            var nav = document.getElementById('sidenav');
+            nav.classList.toggle('open');
+        }
+    </script>
+</html>

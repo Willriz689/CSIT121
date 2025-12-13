@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../../style.css" id="mainStylesheet">
+    <link rel="stylesheet" href="style.css" id="localStylesheet" disabled>
+    <title>Learning HTML & CSS</title>
+</head>
+<body>
+    <div class="hamburger" onclick="toggleNav()">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+
+    <nav id="sidenav" class="sidenav">
+        <div class="closebutton" onclick="toggleNav()">X</div>
+        <a href="../../welcome.html">Welcome</a>
+        <a href="../../index.html">Introduction</a>
+        <a href="../../labsindex.html">Labs Index</a>
+        <a href="../lab01/aboutme.html" class="submenu">Lab 1</a>
+        <a href="../lab02/index.html" class="submenu">Lab 2</a>
+        <a href="../lab03/index.html" class="submenu">Lab 3</a>
+        <a href="../lab04/index.html" class="submenu">Lab 4</a>
+        <a href="../lab05/index.html" class="submenu">Lab 5</a>
+        <a href="../lab06/index.html" class="submenu">Lab 6</a>
+        <a href="../lab07/tierlist.html" class="submenu">Lab 7</a>
+        <a href="../lab08/index.html" class="submenu">Lab 8</a>
+        <a href="../lab09/index.html" class="submenu">Lab 9</a>
+        <a href="../lab10/index.html" class="submenu">Lab 10</a>
+        <a href="../../reflections.html">Reflections</a>
+        <a href="../../sources.html">Sources</a>
+    </nav>
+
+    <header>
+        <h1 id="title" class="headings center padding">Learning HTML & CSS</h1>
+    </header>
+    <main>
+        <article>
+            <h2 class="headings center">Labs 1 & 2</h2>
+            <p class="center padding">
+                While I have learned a lot already, I believe that my favorite thing that I have learned is
+                how to use GitHub. I previously had limited experience with github, and only knew the basics
+                of uploading a file. I now know how to share a repository, and how to host a site through GitHub!
+                I have also learned a lot more tags for HTML than I previously knew, as well as more resources to research from.
+            </p>
+
+
+            <h3 class="headings">Recapped: What I have learned (Labs 1 & 2)</h3>
+            <ul>
+                <li>How to host a site on GitHub</li>
+                <li>How to upload files to github through the GUI</li>
+                <li>More HTML tags for organization and structure</li>
+            </ul>
+
+            <h4 class="headings">Lesson 2: Useful Sites!</h4>
+            <ol>
+                <li><a href="https://www.w3schools.com/html/html_basic.asp"> W3 Schools: HTML Basic Examples</a>This has been my go to guide the past two weeks
+                when I am in need of assistance with basic tags.</li>
+                <li><a href="https://www.freecodecamp.org/news/html-cheat-sheet-html-elements-list-reference/">FreeCodeCamp: HTML Cheat Sheet</a> This is a good go-to guide for
+                quick and easy explanations as well as remembering how to set up the document initially.</li>
+                <li><a href="https://www.w3schools.com/html/html5_semantic_elements.asp">W3 Schools: Semantic Elements</a> This guide is great for remembering semantic elements in HTML.</li>
+            </ol>
+
+            <h2 class="headings center">Lab 3</h2>
+            <p class="center padding">
+                In this project I have learned a lot about using CSS to adjust the positioning and style of the elements better.
+                This includes changing the color of links, adding borders to the elements, and changing the color inside of the borders.
+                I have also learned how to connect a style document to a HTML document.
+            </p>
+
+
+            <h3 class="headings">Recapped: What I have learned (Lab 3)</h3>
+            <ul class="padding">
+                <li>Using CSS to change link colors</li>
+                <li>How to create borders in CSS</li>
+                <li>Using an external style doc</li>
+            </ul>            
+
+            <h4 id="headings">Lesson 3: Useful Sites!</h4>
+            <ol>
+                <li><a href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Styling_basics/Styling_a_bio_page"> Mozilla Developer Network Web Docs, Challenge: Styling a Biography Page
+                </a>While this is a class challenge, I used it as a reference in the solution code for support in this lab.</li>
+                <li><a href="https://www.w3schools.com/css/default.asp">W3 Schools: CSS Tutorial</a> 
+                This guide is good for the basics of CSS, with styling and coloring elements.</li>
+                <li><a href="https://www.w3schools.com/css/css_selectors.asp">W3 Schools: CSS Selectors</a>
+                This website does a very good job at explaining selectors.</li>
+            </ol>            
+
+        </article>
+    </main>
+    <footer>
+        <p>© 2025 William Rizzi</p>
+    </footer>
+    
+    <button id="styleToggle" class="style-toggle-btn">Toggle Style</button>
+    
+    <script>
+        var styleLink = document.getElementById('mainStylesheet');
+        var localStyleLink = document.getElementById('localStylesheet');
+        var toggleBtn = document.getElementById('styleToggle');
+        var usingMainStyle = true;
+        
+        toggleBtn.onclick = function() {
+            if (usingMainStyle) {
+                styleLink.disabled = true;
+                localStyleLink.disabled = false;
+                usingMainStyle = false;
+            } else {
+                styleLink.disabled = false;
+                localStyleLink.disabled = true;
+                usingMainStyle = true;
+            }
+        };
+        localStyleLink.disabled = true;
+
+        function toggleNav() {
+            var nav = document.getElementById('sidenav');
+            nav.classList.toggle('open');
+        }
+    </script>
+</body>
+</html>

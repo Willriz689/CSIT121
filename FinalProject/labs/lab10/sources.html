@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 10: Web Standards</title>
+    <link rel="stylesheet" href="../../style.css" id="mainStylesheet">
+    <link rel="stylesheet" href="style.css" id="localStylesheet" disabled>
+</head>
+<body>
+    <div class="hamburger" onclick="toggleNav()">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+
+    <nav id="sidenav" class="sidenav">
+        <div class="closebutton" onclick="toggleNav()">X</div>
+        <a href="../../welcome.html">Welcome</a>
+        <a href="../../index.html">Introduction</a>
+        <a href="../../labsindex.html">Labs Index</a>
+        <a href="../lab01/aboutme.html" class="submenu">Lab 1</a>
+        <a href="../lab02/index.html" class="submenu">Lab 2</a>
+        <a href="../lab03/index.html" class="submenu">Lab 3</a>
+        <a href="../lab04/index.html" class="submenu">Lab 4</a>
+        <a href="../lab05/index.html" class="submenu">Lab 5</a>
+        <a href="../lab06/index.html" class="submenu">Lab 6</a>
+        <a href="../lab07/tierlist.html" class="submenu">Lab 7</a>
+        <a href="../lab08/index.html" class="submenu">Lab 8</a>
+        <a href="../lab09/index.html" class="submenu">Lab 9</a>
+        <a href="../lab10/index.html" class="submenu">Lab 10</a>
+        <a href="../../reflections.html">Reflections</a>
+        <a href="../../sources.html">Sources</a>
+    </nav>
+
+    <nav class="lab04-nav">
+        <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="Whatisit.html">What is it?</a></li>
+        <li><a href="howused.html">How is it Used?</a></li>
+        <li><a href="whyimportant.html">Why Important?</a></li>
+        <li><a href="sources.html">References</a></li>
+        </ul>
+    </nav>
+    <main>
+        <h1>References</h1>
+        <ul>
+            <li>Chrome Developers. (2016). <i>KeyboardEvent key values</i>. Chrome Developers Blog. <a href="https://developer.chrome.com/blog/keyboardevent-keys-codes#what%E2%80%99s_this_mean_in_practice">https://developer.chrome.com/blog/keyboardevent-keys-codes#what%E2%80%99s_this_mean_in_practice</a></li>
+            <li>GeeksforGeeks. (2025). <i>JavaScript tutorial</i>. GeeksforGeeks. <a href="https://www.geeksforgeeks.org/javascript/javascript-tutorial/">https://www.geeksforgeeks.org/javascript/javascript-tutorial/</a></li>
+            <li>Mozilla Developer Network. (n.d.). <i>Element: keydown event</i>. MDN Web Docs. <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/keydown_event">https://developer.mozilla.org/en-US/docs/Web/API/Element/keydown_event</a></li>
+            <li>Mozilla Developer Network. (n.d.). <i>EventTarget: addEventListener() method</i>. MDN Web Docs. <a href="https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener">https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener</a></li>
+            <li>Mozilla Developer Network. (n.d.). <i>KeyboardEvent</i>. MDN Web Docs. <a href="https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent">https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent</a></li>
+            <li>Mozilla Developer Network. (n.d.). <i>KeyboardEvent: key property</i>. MDN Web Docs. <a href="https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/key">https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/key</a></li>
+            <li>W3C (Kacmarcik, G., & Leithead, T.). (2025). <i>UI Events KeyboardEvent code Values</i>. W3C. <a href="https://www.w3.org/TR/uievents-code/#keyboard-101">https://www.w3.org/TR/uievents-code/#keyboard-101</a></li>
+            <li>W3Schools. (2025). <i>CSS positioning</i>. W3Schools. <a href="https://www.w3schools.com/css/css_positioning.asp">https://www.w3schools.com/css/css_positioning.asp</a></li>
+            <li>W3Schools. (2025). <i>CSS Styling buttons</i>. W3Schools. <a href="https://www.w3schools.com/css/css3_buttons.asp">https://www.w3schools.com/css/css3_buttons.asp</a></li>
+            <li>W3Schools. (2025). <i>HTML DOM element addEventListener() method</i>. W3Schools. <a href="https://www.w3schools.com/jsref/met_element_addeventlistener.asp">https://www.w3schools.com/jsref/met_element_addeventlistener.asp</a></li>
+            <li>W3Schools. (2025). <i>JavaScript introduction</i>. W3Schools. <a href="https://www.w3schools.com/js/js_intro.asp">https://www.w3schools.com/js/js_intro.asp</a></li>
+        </ul>
+    </main>
+    <footer>
+        <p>© 2025 William Rizzi</p>
+    </footer>
+
+<button id="styleToggle" class="style-toggle-btn">Toggle Style</button>
+
+<script>
+    function toggleNav() {
+        var nav = document.getElementById('sidenav');
+        nav.classList.toggle('open');
+    }
+
+    var styleLink = document.getElementById('mainStylesheet');
+    var localStyleLink = document.getElementById('localStylesheet');
+    var toggleBtn = document.getElementById('styleToggle');
+    var usingMainStyle = true;
+    
+    toggleBtn.onclick = function() {
+        if (usingMainStyle) {
+            styleLink.disabled = true;
+            localStyleLink.disabled = false;
+            usingMainStyle = false;
+        } else {
+            styleLink.disabled = false;
+            localStyleLink.disabled = true;
+            usingMainStyle = true;
+        }
+    };
+    localStyleLink.disabled = true;
+</script>
+</body>
+</html>

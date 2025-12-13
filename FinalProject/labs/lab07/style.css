@@ -1,0 +1,135 @@
+body {
+    background-color: #DF4601;
+    font-family: "Times New Roman", Times, serif;
+}
+
+main {
+    margin: auto 5%;
+    background-color: white;
+    font-size: 1.1em;
+}
+
+article {
+    margin: 3em;
+    padding-bottom: 4em;
+}
+
+h1 {
+    padding-top: .2em;
+    text-align: center;
+}
+
+h2 {
+    margin-top: -1em;
+    text-align: center; 
+}
+
+nav {
+    display: flex;
+    background-color: black;
+    justify-content: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    padding: 1em;
+}
+
+nav ul {
+    display: flex;
+    list-style-type: none;
+    flex-flow: row nowrap;
+    justify-content: center;
+    text-align: center;
+}
+
+footer {
+    text-align: center;
+    color: black;
+    padding-bottom: 1em;
+}
+
+table {
+    width: 80%;
+    margin: auto;
+    border-collapse: collapse;
+}
+
+table th, td {
+    border: 2px solid black;
+}
+
+th {
+    background-color: rgba(0, 0, 0, 0.791);
+    color: white;
+}
+
+caption {
+    font-size: 2em;
+    margin-bottom: .25em;
+    font-weight: bold;
+}
+
+img {
+    padding: 1em;
+}
+
+form {
+    width: 70%;
+    margin: auto;
+    padding-bottom: 2em;
+}
+
+form {
+    display: flex;
+    flex-flow: column nowrap;
+    width: 70%;
+    margin: auto;
+}
+
+.form-small {
+    width: 30%;
+}
+
+.form-radio {
+    display: inline;
+    padding-top: 2em;
+}
+
+.spacer {
+    padding: 3em;
+}
+
+@media (max-width: 750px) {
+    main {
+        margin: auto 2%;
+        background-color: white;
+    }
+
+    nav {
+    display: flex;
+    background-color: black;
+    justify-content: center;
+    width: 100%;
+    }
+
+    nav a {
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    display: block;
+    width: 100%;
+    padding: 1em;
+    }
+
+    nav ul {
+    display: flex;
+    list-style-type: none;
+    flex-flow: column nowrap;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    }
+}
